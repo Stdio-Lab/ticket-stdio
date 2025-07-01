@@ -1,6 +1,5 @@
 "use client";
 import { vars } from "nativewind";
-
 export const config = {
   light: vars({
     "--color-primary-0": "#B3B3B3",
@@ -15,7 +14,6 @@ export const config = {
     "--color-primary-800": "#0D0D0D",
     "--color-primary-900": "#0A0A0A",
     "--color-primary-950": "#080808",
-
     /* Secondary  */
     "--color-secondary-0": "#FEFFFF",
     "--color-secondary-50": "#F1F2F2",
@@ -29,7 +27,6 @@ export const config = {
     "--color-secondary-800": "#272626",
     "--color-secondary-900": "#181717",
     "--color-secondary-950": "#0B0C0C",
-
     /* Tertiary */
     "--color-tertiary-0": "#FFFAF5",
     "--color-tertiary-50": "#FFF2E5",
@@ -43,7 +40,6 @@ export const config = {
     "--color-tertiary-800": "#824917",
     "--color-tertiary-900": "#6C3D13",
     "--color-tertiary-950": "#543112",
-
     /* Error */
     "--color-error-0": "#FEE9E9",
     "--color-error-50": "#FEE2E2",
@@ -57,7 +53,6 @@ export const config = {
     "--color-error-800": "#991B1B",
     "--color-error-900": "#7F1D1D",
     "--color-error-950": "#531313",
-
     /* Success */
     "--color-success-0": "#E4FFF4",
     "--color-success-50": "#CAFFE8",
@@ -71,7 +66,6 @@ export const config = {
     "--color-success-800": "#166534",
     "--color-success-900": "#14532D",
     "--color-success-950": "#1B3224",
-
     /* Warning */
     "--color-warning-0": "#FFFDFB",
     "--color-warning-50": "#FFF9F5",
@@ -85,7 +79,6 @@ export const config = {
     "--color-warning-800": "#824417",
     "--color-warning-900": "#6C3813",
     "--color-warning-950": "#542D12",
-
     /* Info */
     "--color-info-0": "#ECF8FE",
     "--color-info-50": "#C7EBFC",
@@ -99,7 +92,6 @@ export const config = {
     "--color-info-800": "#075A83",
     "--color-info-900": "#05405D",
     "--color-info-950": "#032638",
-
     /* Typography */
     "--color-typography-0": "#FEFEFF",
     "--color-typography-50": "#F5F5F5",
@@ -113,7 +105,6 @@ export const config = {
     "--color-typography-800": "#404040",
     "--color-typography-900": "#262627",
     "--color-typography-950": "#171717",
-
     /* Outline */
     "--color-outline-0": "#FDFEFE",
     "--color-outline-50": "#F3F3F3",
@@ -140,14 +131,12 @@ export const config = {
     "--color-background-800": "#414040",
     "--color-background-900": "#272625",
     "--color-background-950": "#181718",
-
     /* Background Special */
     "--color-background-error": "#FEF1F1",
     "--color-background-warning": "#FFF4EB",
     "--color-background-success": "#EDFCF2",
     "--color-background-muted": "#F6F6F7",
     "--color-background-info": "#EBF8FE",
-
     /* Border */
     "--color-border-0": "#FDFEFE",
     "--color-border-50": "#F3F3F3",
@@ -175,7 +164,6 @@ export const config = {
     "--color-primary-800": "#FDFDFD",
     "--color-primary-900": "#FDFCFC",
     "--color-primary-950": "#FDFCFC",
-
     /* Secondary  */
     "--color-secondary-0": "#0B0C0C",
     "--color-secondary-50": "#181717",
@@ -189,7 +177,6 @@ export const config = {
     "--color-secondary-800": "#E7E8E8",
     "--color-secondary-900": "#F1F2F2",
     "--color-secondary-950": "#FEFFFF",
-
     /* Tertiary */
     "--color-tertiary-0": "#543112",
     "--color-tertiary-50": "#6C3D13",
@@ -203,7 +190,6 @@ export const config = {
     "--color-tertiary-800": "#FFE9D5",
     "--color-tertiary-900": "#FFF2E5",
     "--color-tertiary-950": "#FFFAF5",
-
     /* Error */
     "--color-error-0": "#531313",
     "--color-error-50": "#7F1D1D",
@@ -217,7 +203,6 @@ export const config = {
     "--color-error-800": "#FECACA",
     "--color-error-900": "#FEE2E2",
     "--color-error-950": "#FEE9E9",
-
     /* Success */
     "--color-success-0": "#1B3224",
     "--color-success-50": "#14532D",
@@ -231,7 +216,6 @@ export const config = {
     "--color-success-800": "#A2F1C0",
     "--color-success-900": "#CAFFE8",
     "--color-success-950": "#E4FFF4",
-
     /* Warning */
     "--color-warning-0": "#542D12",
     "--color-warning-50": "#6C3813",
@@ -245,7 +229,6 @@ export const config = {
     "--color-warning-800": "#FFE7D5",
     "--color-warning-900": "#FFF9F5",
     "--color-warning-950": "#FFFDFB",
-
     /* Info */
     "--color-info-0": "#032638",
     "--color-info-50": "#05405D",
@@ -259,7 +242,6 @@ export const config = {
     "--color-info-800": "#A2DDFA",
     "--color-info-900": "#C7EBFC",
     "--color-info-950": "#ECF8FE",
-
     /* Typography */
     "--color-typography-0": "#171717",
     "--color-typography-50": "#262627",
@@ -273,7 +255,6 @@ export const config = {
     "--color-typography-800": "#E5E5E5",
     "--color-typography-900": "#F5F5F5",
     "--color-typography-950": "#FEFEFF",
-
     /* Outline */
     "--color-outline-0": "#1A1717",
     "--color-outline-50": "#272624",
@@ -287,7 +268,6 @@ export const config = {
     "--color-outline-800": "#E6E6E6",
     "--color-outline-900": "#F3F3F3",
     "--color-outline-950": "#FDFEFE",
-
     /* Background */
     "--color-background-0": "#121212",
     "--color-background-50": "#272625",
@@ -301,14 +281,12 @@ export const config = {
     "--color-background-800": "#F2F1F1",
     "--color-background-900": "#F6F6F6",
     "--color-background-950": "#FEFEFE",
-
     /* Background Special */
     "--color-background-error": "#422B2B",
     "--color-background-warning": "#412F23",
     "--color-background-success": "#1C2B21",
     "--color-background-muted": "#252526",
     "--color-background-info": "#1A282E",
-
     /* Border */
     "--color-border-0": "#1A1717",
     "--color-border-50": "#272624",
