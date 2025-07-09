@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { useForm, Controller } from "react-hook-form";
 import { useRouter } from "expo-router";
+import { login } from "@/utils/supabase";
 
 const USERS = [
   { email: "gabrial@gmail.com", password: "Gabrial@123" },
@@ -18,7 +19,7 @@ const USERS = [
 
 const Login = () => {
 
-    const router = useRouter();
+  const router = useRouter();
 
   const {
     control,
@@ -41,10 +42,9 @@ const Login = () => {
     return /\S+@\S+\.\S+/.test(email);
   };
 
-  const onSubmit = (data: any) => {
+  const onSubmit = async (data: any) => {
     // navigation.navigate("Home");
-    router.push("/screens/home");
-    console.log("PUSH router")
+
 
     clearErrors();
     let valid = true;
@@ -67,26 +67,38 @@ const Login = () => {
 
     if (!valid) return;
 
-    const user = USERS.find((u) => u.email === data.email);
-
-    if (!user) {
-      setValidated({ emailValid: false, passwordValid: true });
-      setError("email", { type: "manual", message: "Email not found" });
-      return;
-    }
-
-    if (user.password !== data.password) {
-      setValidated({ emailValid: true, passwordValid: false });
-      setError("password", { type: "manual", message: "Password incorrect" });
-      return;
-    }
-
+    // const user = USERS.find((u) => u.email === data.email);
     setValidated({ emailValid: true, passwordValid: true });
+
+    
+    const result = await login(data.email, data.password)
+
+
+    if (!result) {
+    //   setValidated({ emailValid: false, passwordValid: true });
+    //   setError("email", { type: "manual", message: "Email not found" });
+      console.log("ERROR in login")
+      return;
+    }
+
+    // if (result.password !== data.password) {
+    //   setValidated({ emailValid: true, passwordValid: false });
+    //   setError("password", { type: "manual", message: "Password incorrect" });
+    //   return;
+    // }
+
+    router.push("/(tabs)/home");
     alert("Logged in successfully!");
     reset();
   };
 
+  function redirectSignIn() {
+    console.log("GO REGISTER")
+    router.push("/auth/signin");
+  }
+
   const [showPassword, setShowPassword] = useState(false);
+
 
   return (
     <View style={styles.container}>
@@ -170,7 +182,12 @@ const Login = () => {
       >
         <Text style={styles.buttonText}>Log in</Text>
       </TouchableOpacity>
+
+      <Text onPress={redirectSignIn}>
+        Registrate
+      </Text>
     </View>
+
   );
 };
 
