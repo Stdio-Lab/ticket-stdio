@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  expo-web:
+    build: .
+    container_name: expo_web
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "19000:19000" # Expo Web
+    stdin_open: true
+    tty: true
+
+
+# Para todas las versiones
+# version: "3.9"
+
+# services:
+#   expo-app:
+#     build: .
+#     container_name: expo_app
+#     volumes:
+#       - .:/app
+#       - /app/node_modules
+#     ports:
+#       - "19000:19000" # Expo dev server
+#       - "19001:19001" # Expo dev tools
+#       - "19002:19002" # Expo LAN/tunnel
+#       - "8081:8081"   # Metro Bundler
+#     environment:
+#       - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0
+#       - REACT_NATIVE_PACKAGER_HOSTNAME=localhost
+#     stdin_open: true
+#     tty: true
