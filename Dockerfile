@@ -15,7 +15,7 @@ COPY . .
 EXPOSE 19000
 
 # Comando por defecto para desarrollo web
-CMD ["npx", "expo", "start", "--web", "--host", "0.0.0.0"]
+CMD ["npx", "expo", "start", "--web", "--host", "lan"]
 
 # PARA SUBIR TODAS LAS POSIBLES VERSIONES YA SEA MOBIL, DEVTOOLS, ETC...
 # FROM node:20

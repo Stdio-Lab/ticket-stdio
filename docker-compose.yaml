@@ -1,14 +1,14 @@
 version: "3.9"
 
 services:
-  expo-web:
+  ticket-studio:
     build: .
-    container_name: expo_web
+    container_name: ticket-studio
     volumes:
       - .:/app
       - /app/node_modules
     ports:
-      - "19000:19000" # Expo Web
+      - "19000:8081" # Expo Web
     networks:
       - reverse_proxy_network
     stdin_open: true
