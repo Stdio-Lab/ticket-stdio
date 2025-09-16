@@ -9,8 +9,15 @@ services:
       - /app/node_modules
     ports:
       - "19000:19000" # Expo Web
+    networks:
+      - reverse_proxy_network
     stdin_open: true
     tty: true
+
+networks:
+  reverse_proxy_network:
+    external: true
+
 
 
 # Para todas las versiones
