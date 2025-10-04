@@ -10,14 +10,11 @@ import { Box, Input, Button,  Text, VStack } from "@gluestack-ui/themed";
 
 import { useForm, Controller } from "react-hook-form";
 import { useRouter } from "expo-router";
-import { login, signin } from "@/utils/supabase";
+import { signin } from "@/utils/supabase";
 
-const USERS = [
-  { email: "gabrial@gmail.com", password: "Gabrial@123" },
-  { email: "tom@gmail.com", password: "Tom@123" },
-  { email: "thomas@gmail.com", password: "Thomas@1234" },
-];
 
+
+// Register
 const Signin = () => {
 
   const router = useRouter();
@@ -89,7 +86,6 @@ const Signin = () => {
     // }
 
     router.push("/(tabs)/home");
-    alert("Logged in successfully!");
     reset();
   };
 

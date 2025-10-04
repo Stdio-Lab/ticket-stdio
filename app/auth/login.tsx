@@ -11,11 +11,6 @@ import { useForm, Controller } from "react-hook-form";
 import { useRouter } from "expo-router";
 import { login } from "@/utils/supabase";
 
-const USERS = [
-  { email: "gabrial@gmail.com", password: "Gabrial@123" },
-  { email: "tom@gmail.com", password: "Tom@123" },
-  { email: "thomas@gmail.com", password: "Thomas@1234" },
-];
 
 const Login = () => {
 
@@ -88,7 +83,7 @@ const Login = () => {
     // }
 
     router.push("/(tabs)/home");
-    alert("Logged in successfully!");
+    console.log("Logged in successfully!");
     reset();
   };
 

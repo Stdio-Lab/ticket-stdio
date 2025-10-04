@@ -18,7 +18,7 @@ type ISpinnerProps = React.ComponentProps<typeof UISpinner>;
 const Spinner = React.forwardRef<
   React.ElementRef<typeof UISpinner>,
   ISpinnerProps
->(({ className, color, ...props }, ref) => {
+>(({ className = 'absolute inset-0 flex items-center justify-center', color, ...props }, ref) => {
   return (
     <UISpinner
       ref={ref}

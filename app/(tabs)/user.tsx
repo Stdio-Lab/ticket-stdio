@@ -1,10 +1,20 @@
 import { Box, Text, VStack, Heading, Center, Avatar, HStack } from "@gluestack-ui/themed"
-import { useAuth } from "../auth/context/AuthContext"
+import useAuth from "../auth/context/useAuth"
+import { Button, ButtonText } from "@/components/ui/button";
+import { router } from "expo-router";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 
 export default function UserScreen() {
   const { employee, user } = useAuth();
   if (!employee) return <Text>Cargando...</Text>;
+
+  const logOut = () => {
+    console.log("Log Out");
+    AsyncStorage.removeItem("session");
+    AsyncStorage.removeItem("employee");
+    router.replace("/auth/login");
+  }
 
   return (
     // <Box flex={1} bg="$backgroundLight50">
@@ -44,6 +54,10 @@ export default function UserScreen() {
           </HStack>
         </Box>
       </VStack>
+      <Button action="primary" variant="solid" size="md" onPress={() => logOut()}>
+        <ButtonText>Log out</ButtonText>
+      </Button>
     </Box>
+
   )
 }

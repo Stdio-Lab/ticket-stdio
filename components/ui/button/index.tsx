@@ -492,3 +492,65 @@ ButtonIcon.displayName = 'ButtonIcon';
 ButtonGroup.displayName = 'ButtonGroup';
 
 export { Button, ButtonText, ButtonSpinner, ButtonIcon, ButtonGroup };
+
+
+
+// 1️⃣ Uso básico de Button
+// import { Button, ButtonText } from './path/to/Button';
+
+// <Button action="primary" variant="solid" size="md" onPress={() => console.log('clicked')}>
+//   <ButtonText>Click Me</ButtonText>
+// </Button>
+
+
+// action → determina el estilo de color: primary, secondary, positive, negative.
+
+// variant → el tipo de botón: solid, outline, link.
+
+// size → tamaño: xs, sm, md, lg, xl.
+
+// onPress → función que se ejecuta al hacer click/tap.
+
+// El texto va dentro de <ButtonText>.
+
+// 2️⃣ Agregar iconos
+// import { ButtonIcon, ButtonText, Button } from './path/to/Button';
+// import { Svg } from 'react-native-svg';
+
+// <Button action="positive" size="lg">
+//   <ButtonIcon as={Svg} width={20} height={20} />
+//   <ButtonText>Save</ButtonText>
+// </Button>
+
+
+// ButtonIcon se puede pasar un componente SVG con as={SvgComponent}.
+
+// width y height ajustan el tamaño del icono.
+
+// Se heredan estilos del botón automáticamente (colores según action).
+
+// 3️⃣ Spinner dentro del botón (loading)
+// import { Button, ButtonText, ButtonSpinner } from './path/to/Button';
+
+// <Button action="primary" size="md">
+//   <ButtonSpinner color="#fff" size={20} />
+//   <ButtonText>Loading...</ButtonText>
+// </Button>
+
+
+// ButtonSpinner es un ActivityIndicator con estilo adaptado al botón.
+
+// Puedes cambiar el color y tamaño.
+
+// 4️⃣ Botones en grupo
+// import { Button, ButtonGroup, ButtonText } from './path/to/Button';
+
+// <ButtonGroup space="sm">
+//   <Button action="primary"><ButtonText>Yes</ButtonText></Button>
+//   <Button action="negative"><ButtonText>No</ButtonText></Button>
+// </ButtonGroup>
+
+
+// ButtonGroup permite agrupar botones y controlar el espacio (space) entre ellos.
+
+// isAttached={true} los junta sin separación.
