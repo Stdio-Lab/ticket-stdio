@@ -85,7 +85,7 @@ const Signin = () => {
     //   return;
     // }
 
-    router.push("/(tabs)/home");
+    router.push("/auth/completeProfile");
     reset();
   };
 
